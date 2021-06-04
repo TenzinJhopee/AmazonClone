@@ -1,9 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, FlatList } from 'react-native';
 import ProductItem from '../../components/ProductItems';
-import products from '../../data/products';
+import QuantitySelector from '../../components/QuantitySelector';
+import products from '../../data/cart';
 
-const HomeScreen = () => {
+const ShoppingCart = () => {
   return (
     <View style={styles.page}>
       {/* Render Product Compoentn */}
@@ -11,7 +12,10 @@ const HomeScreen = () => {
 
       <FlatList
         data={products}
-        renderItem={({ item }) => <ProductItem item={item} />}
+        renderItem={({ item }) => (
+          <ProductItem item={item.item} />
+          
+        )}
         showsVerticalScrollIndicator={false}
         keyExtractor={({ id }) => id}
       />
@@ -26,4 +30,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default ShoppingCart;
