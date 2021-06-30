@@ -22,6 +22,7 @@
 // import HomeScreen from './src/screens/HomeScreen';
 import ProductScreen from './src/screens/ProductScreen';
 import ShoppingCart from './src/screens/ShoppingCartScreen';
+import AddressScreen from './src/screens/AddressScreen';
 
  const App = () => {
    const isDarkMode = useColorScheme() === 'dark';
@@ -34,7 +35,8 @@ import ShoppingCart from './src/screens/ShoppingCartScreen';
      <SafeAreaView style={backgroundStyle}>
        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
        {/* <ProductScreen /> */}
-       <ShoppingCart/>
+       {/* <ShoppingCart/> */}
+       <AddressScreen />
      </SafeAreaView>
    );
  };
